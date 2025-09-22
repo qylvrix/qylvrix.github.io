@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Navbar & Toggle -->
+  <link rel="stylesheet" href="/COMPONENTS/navbar.css">
+  <link rel="stylesheet" href="/COMPONENTS/TOGGLE/toggle.css">
+  
+  <!-- Main theme -->
+  <link rel="stylesheet" href="/main-dark.css">
+  
+  <title>MINI GAMES</title>
+  
+  <style>
+    main {
+      margin-top: 20px;
+    }
+    
+    /* Game Grid */
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    /* Individual Card */
+    .game-card {
+      background-color: var(--card-bg, #1a1a1a);
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .game-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+    }
+    
+    /* Icon */
+    .game-card img {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+    
+    /* Game Name */
+    .game-card span {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      color: var(--text-color, #fff);
+    }
+    
+    /* Remove default ul styling */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar stays untouched -->
+  <header>
+    <!-- Your navbar content -->
+  </header>
+  
+  <main>
+    <ul class="game-grid">
+      <!-- Game Card: Snake -->
+      <li class="game-card">
+        <a href="/PAGES/GAMES/SNAKE/snake.html">
+          <img src="/icons/python.svg" alt="Snake">
+          <span>Snake</span>
+        </a>
+      </li>
+    </ul>
+  </main>
+  
+  <footer>
+    
+  </footer>
+  
+  <script src="/COMPONENTS/navbar.js"></script>
+  <script src="/COMPONENTS/TOGGLE/toggle.js"></script>
+</body>
+
+</html>

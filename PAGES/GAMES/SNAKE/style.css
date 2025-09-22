@@ -1,0 +1,120 @@
+@font-face {
+  font-family: Comfortaa;
+  src: url(/FONTS/Comfortaa.ttf);
+}
+
+body {
+  margin: 0;
+  font-family: Comfortaa;
+  background-color: #111;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-canvas {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1/1;
+  background-color: #222;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100vw;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  font-family: Comfortaa;
+}
+
+.buttons button {
+  flex: 1;
+  font-family: Comfortaa;
+  padding: 10px;
+  font-size: 16px;
+  background: #333;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.buttons button:active {
+  background: floralwhite;
+  transform: scale(0.95);
+}
+
+.keys {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.arr {
+  width: 60px;
+  height: 60px;
+  background: #333;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+  user-select: none;
+  transition: 0.1s;
+}
+
+.arr:active {
+  background: #555;
+  transform: scale(0.95);
+}
+
+/* Chevron arrows remain same as before */
+.chevron::before {
+  border-style: solid;
+  border-width: 8px 8px 0 0;
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  top: -10px;
+  position: relative;
+  transform: rotate(-45deg);
+}
+
+.chevron.down::before {
+  transform: rotate(135deg);
+  top: -22px;
+}
+
+.chevron.right::before {
+  transform: rotate(45deg);
+  top: -18px;
+  left: -5px;
+}
+
+.chevron.left::before {
+  transform: rotate(225deg);
+  top: -18px;
+  left: 5px;
+}
+
+.up {
+  position: relative;
+  top: -4px;
+}

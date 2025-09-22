@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY SKILLS</title>
+  <link rel="stylesheet" href="/COMPONENTS/navbar.css">
+  <link rel="stylesheet" href="/COMPONENTS/TOGGLE/toggle.css">
+  <link rel="stylesheet" href="/main-dark.css">
+  <link rel="stylesheet" href="/COMPONENTS/skills.css">
+</head>
+
+<body>
+  <header></header>
+  
+  <main>
+    <section id="skills">
+      <h1>My Skills</h1>
+      <p>Skills I’ve honed and mastered so far.</p>
+      
+      <div class="skill">
+        <span class="skill-name">Python</span>
+        <div class="progress-bar">
+          <div class="progress" data-progress="78">
+            <span class="progress-text">0%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer></footer>
+  
+  <script src="/COMPONENTS/navbar.js"></script>
+  <script src="/main.js"></script>
+  
+  <!-- Smooth Skills Progress JS -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const progressBars = document.querySelectorAll('.progress');
+      
+      progressBars.forEach(bar => {
+        const target = parseInt(bar.getAttribute('data-progress'));
+        let width = 0;
+        const text = bar.querySelector('.progress-text');
+        
+        function animate() {
+          if (width >= target) return;
+          width++;
+          bar.style.width = width + '%';
+          text.textContent = width + '%';
+          requestAnimationFrame(animate);
+        }
+        
+        animate();
+      });
+    });
+  </script>
+</body>
+
+</html>

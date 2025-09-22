@@ -1,0 +1,214 @@
+@font-face {
+  font-family: Comfortaa;
+  src: url(/FONTS/Comfortaa.ttf);
+}
+
+body {
+  background-color: rgb(0, 0, 32);
+  color: white;
+  font-family: Comfortaa, sans-serif;
+  line-height: 1.6;
+  padding: 1.5rem;
+  height: 100vh;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #00ffc8;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  text-align: center;
+  font-size: clamp(30px, 2vw, 50px);
+}
+
+/* Text elements */
+p,
+li,
+span,
+div {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color: #00ffc8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+  background: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: 1px solid #00ffc8;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background: #00ffc8;
+  color: rgb(0, 0, 32);
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 32);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+#loader p {
+  color: #00ffc8;
+  font-family: Comfortaa;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #00ffc8;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+a:hover {
+  color: darkcyan;
+  text-decoration: underline lightcyan;
+}
+
+a:active {
+  color: darkcyan;
+  text-decoration: underline lightcyan;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  background: rgb(0, 0, 32);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px ghostwhite;
+}
+
+.project-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.5rem;
+}
+
+.project-title {
+  display: block;
+  font-weight: bold;
+  color: #00ffc8;
+  margin-bottom: 0.3rem;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* ===== Skills Section ===== */
+#skills {
+  padding: 2rem 1rem;
+}
+
+#skills h1 {
+  text-align: center;
+  color: #00ffc8;
+  margin-bottom: 1rem;
+}
+
+#skills p {
+  text-align: center;
+  color: lightcyan;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+/* ===== Individual Skill ===== */
+.skill {
+  margin-bottom: 1.5rem;
+}
+
+.skill-name {
+  display: block;
+  color: #00ffc8;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 25px;
+  background: rgba(0, 255, 200, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  /* start at 0 */
+  border-radius: 12px;
+  background: linear-gradient(90deg, #00ffc8, #00ffff);
+  box-shadow: 0 0 10px lightcyan;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  margin: auto;
+  color: black;
+}
